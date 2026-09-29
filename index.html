@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@450;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=41">
+  <link rel="stylesheet" href="styles.css?v=45">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -34,7 +34,7 @@
       <div class="hero-grid">
         <div class="hero-copy">
           <p class="kicker">Sidecar edits for the Jellyfin you already run</p>
-          <h1>Keep the file. Shape the stream.</h1>
+          <h1>Mute, skip,<br>or cover.</h1>
           <p class="lede">
             You write what should go quiet, leave the stream, or leave the frame.
             A sidecar next to the file tells Jellyfin what to mute, skip, or cover.
@@ -225,16 +225,18 @@
       <p class="kicker">One library</p>
       <h2>Different people. Different cuts. Same files.</h2>
       <div class="household">
-        <div>
+        <div class="household-copy">
           <p class="intro tight">
             One person wants talking quiet. Another wants the file as it sits on disk.
             Same title, same files. Each Jellyfin user picks whether edits apply, and which sidecar categories to honor.
           </p>
           <p class="note">Categories are tags on the sidecar. You turn them on or off per user. The sidecar still decides mute versus skip versus cover. Nobody has to fork the file.</p>
-          <div class="people" role="radiogroup" aria-label="Household profile">
-            <input id="who-alex" type="radio" name="household-who" checked>
-            <input id="who-sam" type="radio" name="household-who">
-            <input id="who-riley" type="radio" name="household-who">
+        </div>
+        <div class="people" role="radiogroup" aria-label="Household profile">
+          <input id="who-alex" type="radio" name="household-who" checked>
+          <input id="who-sam" type="radio" name="household-who">
+          <input id="who-riley" type="radio" name="household-who">
+          <div class="people-list">
             <label class="person" for="who-alex">
               <div>
                 <strong>Alex</strong>
@@ -257,76 +259,76 @@
               <span class="tag off">Original</span>
             </label>
           </div>
-        </div>
-        <figure class="corr-stage" aria-hidden="true">
-          <div class="corr-tree">
-            <svg class="corr-symbols">
-              <symbol id="ico-hear" viewBox="0 0 24 24"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></symbol>
-              <symbol id="ico-see" viewBox="0 0 24 24"><path fill="currentColor" d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></symbol>
-              <symbol id="ico-strike" viewBox="0 0 24 24"><line x1="2" y1="20" x2="22" y2="4" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/></symbol>
-            </svg>
-            <div class="corr-lang">
-            <div class="corr-row is-open">
-              <span class="corr-expand"><i class="corr-chev"></i> Language</span>
-              <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-hear"></use><use class="corr-strike" href="#ico-strike"></use></svg>
-            </div>
-            <div class="corr-minors">
-              <div class="corr-row">
-                <span class="corr-expand"><i class="corr-chev"></i> Profanity</span>
+          <figure class="corr-stage" aria-hidden="true">
+            <div class="corr-tree">
+              <svg class="corr-symbols">
+                <symbol id="ico-hear" viewBox="0 0 24 24"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></symbol>
+                <symbol id="ico-see" viewBox="0 0 24 24"><path fill="currentColor" d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></symbol>
+                <symbol id="ico-strike" viewBox="0 0 24 24"><line x1="2" y1="20" x2="22" y2="4" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/></symbol>
+              </svg>
+              <div class="corr-lang">
+              <div class="corr-row is-open">
+                <span class="corr-expand"><i class="corr-chev"></i> Language</span>
                 <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-hear"></use><use class="corr-strike" href="#ico-strike"></use></svg>
               </div>
-              <div class="corr-row">
-                <span class="corr-expand"><i class="corr-chev"></i> Blasphemy</span>
-                <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-hear"></use><use class="corr-strike" href="#ico-strike"></use></svg>
+              <div class="corr-minors">
+                <div class="corr-row">
+                  <span class="corr-expand"><i class="corr-chev"></i> Profanity</span>
+                  <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-hear"></use><use class="corr-strike" href="#ico-strike"></use></svg>
+                </div>
+                <div class="corr-row">
+                  <span class="corr-expand"><i class="corr-chev"></i> Blasphemy</span>
+                  <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-hear"></use><use class="corr-strike" href="#ico-strike"></use></svg>
+                </div>
+                <div class="corr-row">
+                  <span class="corr-expand"><i class="corr-chev"></i> Racial &amp; Bigoted Slurs</span>
+                  <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-hear"></use><use class="corr-strike" href="#ico-strike"></use></svg>
+                </div>
+                <div class="corr-row">
+                  <span class="corr-expand"><i class="corr-chev"></i> Childish Language</span>
+                  <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-hear"></use><use class="corr-strike" href="#ico-strike"></use></svg>
+                </div>
+                <div class="corr-row">
+                  <span class="corr-expand"><i class="corr-chev"></i> Captions with Profanity</span>
+                  <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-see"></use><use class="corr-strike" href="#ico-strike"></use></svg>
+                </div>
+                <div class="corr-row">
+                  <span class="corr-expand"><i class="corr-chev"></i> Sexual Reference</span>
+                  <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-hear"></use><use class="corr-strike" href="#ico-strike"></use></svg>
+                </div>
+              </div>
               </div>
               <div class="corr-row">
-                <span class="corr-expand"><i class="corr-chev"></i> Racial &amp; Bigoted Slurs</span>
-                <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-hear"></use><use class="corr-strike" href="#ico-strike"></use></svg>
-              </div>
-              <div class="corr-row">
-                <span class="corr-expand"><i class="corr-chev"></i> Childish Language</span>
-                <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-hear"></use><use class="corr-strike" href="#ico-strike"></use></svg>
-              </div>
-              <div class="corr-row">
-                <span class="corr-expand"><i class="corr-chev"></i> Captions with Profanity</span>
+                <span class="corr-expand"><i class="corr-chev"></i> Sex</span>
                 <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-see"></use><use class="corr-strike" href="#ico-strike"></use></svg>
               </div>
               <div class="corr-row">
-                <span class="corr-expand"><i class="corr-chev"></i> Sexual Reference</span>
-                <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-hear"></use><use class="corr-strike" href="#ico-strike"></use></svg>
+                <span class="corr-expand"><i class="corr-chev"></i> Nudity &amp; Immodesty</span>
+                <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-see"></use><use class="corr-strike" href="#ico-strike"></use></svg>
+              </div>
+              <div class="corr-row">
+                <span class="corr-expand"><i class="corr-chev"></i> Kissing</span>
+                <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-see"></use><use class="corr-strike" href="#ico-strike"></use></svg>
+              </div>
+              <div class="corr-row">
+                <span class="corr-expand"><i class="corr-chev"></i> Violence</span>
+                <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-see"></use><use class="corr-strike" href="#ico-strike"></use></svg>
+              </div>
+              <div class="corr-row">
+                <span class="corr-expand"><i class="corr-chev"></i> Drugs &amp; Alcohol</span>
+                <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-see"></use><use class="corr-strike" href="#ico-strike"></use></svg>
+              </div>
+              <div class="corr-row">
+                <span class="corr-expand"><i class="corr-chev"></i> Medical &amp; Body Process</span>
+                <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-see"></use><use class="corr-strike" href="#ico-strike"></use></svg>
+              </div>
+              <div class="corr-row">
+                <span class="corr-expand"><i class="corr-chev"></i> Credits &amp; Extras</span>
+                <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-see"></use><use class="corr-strike" href="#ico-strike"></use></svg>
               </div>
             </div>
-            </div>
-            <div class="corr-row">
-              <span class="corr-expand"><i class="corr-chev"></i> Sex</span>
-              <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-see"></use><use class="corr-strike" href="#ico-strike"></use></svg>
-            </div>
-            <div class="corr-row">
-              <span class="corr-expand"><i class="corr-chev"></i> Nudity &amp; Immodesty</span>
-              <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-see"></use><use class="corr-strike" href="#ico-strike"></use></svg>
-            </div>
-            <div class="corr-row">
-              <span class="corr-expand"><i class="corr-chev"></i> Kissing</span>
-              <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-see"></use><use class="corr-strike" href="#ico-strike"></use></svg>
-            </div>
-            <div class="corr-row">
-              <span class="corr-expand"><i class="corr-chev"></i> Violence</span>
-              <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-see"></use><use class="corr-strike" href="#ico-strike"></use></svg>
-            </div>
-            <div class="corr-row">
-              <span class="corr-expand"><i class="corr-chev"></i> Drugs &amp; Alcohol</span>
-              <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-see"></use><use class="corr-strike" href="#ico-strike"></use></svg>
-            </div>
-            <div class="corr-row">
-              <span class="corr-expand"><i class="corr-chev"></i> Medical &amp; Body Process</span>
-              <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-see"></use><use class="corr-strike" href="#ico-strike"></use></svg>
-            </div>
-            <div class="corr-row">
-              <span class="corr-expand"><i class="corr-chev"></i> Credits &amp; Extras</span>
-              <svg class="corr-ico" viewBox="0 0 24 24"><use href="#ico-see"></use><use class="corr-strike" href="#ico-strike"></use></svg>
-            </div>
-          </div>
-        </figure>
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -403,6 +405,19 @@
     const onScroll = () => bar.classList.toggle("is-scrolled", window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
+
+    const household = document.querySelector(".household");
+    const stage = document.querySelector(".corr-stage");
+    if (household && stage) {
+      household.querySelectorAll('input[name="household-who"]').forEach((input) => {
+        input.addEventListener("change", () => {
+          if (!window.matchMedia("(max-width: 900px)").matches) return;
+          requestAnimationFrame(() => {
+            stage.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          });
+        });
+      });
+    }
   </script>
 </body>
 </html>

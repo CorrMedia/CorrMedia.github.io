@@ -757,26 +757,31 @@ h2 {
 .household {
   display: grid;
   grid-template-columns: 1.15fr 0.75fr;
-  gap: 1.6rem;
+  column-gap: 1.6rem;
   margin-top: 2rem;
   align-items: start;
   overflow: visible;
 }
 
+.household-copy {
+  grid-column: 1;
+  margin-bottom: 1.4rem;
+}
+
 .people {
-  display: grid;
-  gap: 0.65rem;
-  margin-top: 1.4rem;
+  display: contents;
 }
 
 .people input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
+  display: none;
+}
+
+.people-list {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
 }
 
 .person {
@@ -788,6 +793,14 @@ h2 {
   border-radius: 10px;
   background: var(--bg-2);
   cursor: pointer;
+}
+
+.corr-stage {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+  margin: 0;
+  padding: 0;
 }
 
 .household:has(#who-alex:checked) label[for="who-alex"],
@@ -827,11 +840,6 @@ h2 {
 .tag.off {
   border-color: var(--line);
   color: var(--muted);
-}
-
-.corr-stage {
-  margin: 0.4rem 0 0;
-  padding: 0;
 }
 
 .corr-tree {
@@ -1050,6 +1058,55 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .people {
+    display: grid;
+    gap: 0.65rem;
+  }
+
+  .people-list {
+    display: contents;
+  }
+
+  .household-copy {
+    margin-bottom: 0;
+  }
+
+  label[for="who-alex"] {
+    order: 1;
+  }
+
+  label[for="who-sam"] {
+    order: 3;
+  }
+
+  label[for="who-riley"] {
+    order: 5;
+  }
+
+  .household:has(#who-alex:checked) .corr-stage {
+    order: 2;
+  }
+
+  .household:has(#who-sam:checked) .corr-stage {
+    order: 4;
+  }
+
+  .household:has(#who-riley:checked) .corr-stage {
+    order: 6;
+  }
+
+  .corr-stage {
+    grid-column: auto;
+    grid-row: auto;
+    margin: 0;
+    width: 100%;
+  }
+
+  .corr-tree {
+    width: 100%;
+    max-width: none;
+  }
+
   .player-shell {
     width: 100%;
   }
@@ -1057,10 +1114,6 @@ h2 {
   .plus {
     justify-self: center;
     text-align: center;
-  }
-
-  .corr-stage {
-    margin: 0.8rem 0 0;
   }
 }
 

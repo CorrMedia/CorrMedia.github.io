@@ -8,12 +8,11 @@
   <meta property="og:title" content="CorrMedia — Sidecar edits for Jellyfin">
   <meta property="og:description" content="A sidecar next to the file tells Jellyfin what to mute, skip, or cover. The original on disk stays untouched.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="images/tears-of-steel-barley.jpg">
+  <meta property="og:image" content="images/og-wordmark.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@450;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=45">
+  <link rel="stylesheet" href="styles.css?v=52">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -48,11 +47,11 @@
         <figure class="player">
           <div class="player-shell">
             <div class="player-head">
-              <p class="player-title">Tears&nbsp;of&nbsp;Steel <em>(Edited)</em></p>
+              <p class="player-title">Ash&nbsp;Meridian <em>(Edited)</em></p>
               <p class="player-clock">12:14</p>
             </div>
             <div class="player-stage">
-              <img src="images/tears-of-steel-barley.jpg" width="2048" height="857" alt="A still from Tears of Steel: Barley holds a radio to his mouth beside a rifle scope.">
+              <img src="images/2026-09-29_14-33-53_5773.png" width="1536" height="640" alt="A man in a leather jacket walks away down a smoke-filled street, fires burning on both sides.">
             </div>
             <div class="player-deck" role="img" aria-label="Edited timeline. Several lines are muted. A stretch is cut out of the stream. Runtime twelve minutes fourteen seconds.">
               <div class="scrub-rail" aria-hidden="true">
@@ -83,8 +82,7 @@
             </div>
           </div>
           <figcaption class="poster-credit">
-            Still from <cite>Tears of Steel</cite>.
-            <a href="https://mango.blender.org/"> (CC) Blender Foundation · mango.blender.org</a>
+            <span>The picture and the timeline are illustrations.</span>
           </figcaption>
         </figure>
       </div>
@@ -96,12 +94,12 @@
         </div>
         <div class="files">
           <div class="file">
-            <strong>TearsOfSteel.mkv</strong>
+            <strong>AshMeridian.mkv</strong>
             <small>The master. Untouched.</small>
           </div>
           <div class="plus" aria-hidden="true">+</div>
           <div class="file file-json">
-            <strong>TearsOfSteel.corr.json</strong>
+            <strong>AshMeridian.corr.json</strong>
             <small>Edits the server applies.</small>
           </div>
         </div>
@@ -129,7 +127,7 @@
         <article class="step">
           <em>02</em>
           <h3>The server cuts the stream</h3>
-          <p>Patched Jellyfin loads the sidecar before the first packet. It mutes, covers, then cuts. No client has to seek or ride the volume.</p>
+          <p>The CorrMedia overlay loads the sidecar before the first packet. It mutes, covers, then cuts. No client has to seek or ride the volume.</p>
         </article>
         <article class="step">
           <em>03</em>
@@ -343,14 +341,14 @@
             The file on disk is never rewritten.
           </p>
           <ul>
-            <li>Patched Jellyfin 12.1 with the CorrMedia overlay</li>
+            <li>The CorrMedia overlay for Jellyfin 12.1</li>
             <li>CorrMedia plugin, apply-edits on by default</li>
             <li>A sidecar beside each title you want to shape</li>
           </ul>
         </div>
         <aside class="aside">
           <h3>Honest limits</h3>
-          <p>Edited playback transcodes. Cuts force HLS. On stock Jellyfin the sidecar is not applied. That is the trade for a real cut instead of a client trick.</p>
+          <p>Edited playback transcodes into a temporary stream (HLS when there are cuts). The library file is never rewritten. On stock Jellyfin the sidecar is not applied. That is the trade for a real cut instead of a client trick.</p>
         </aside>
       </div>
     </section>
@@ -392,11 +390,21 @@
   </main>
 
   <footer class="wrap site-footer">
-    <div>CorrMedia · sidecar edits for a patched Jellyfin</div>
-    <div>
-      <a href="https://github.com/jellyfin/jellyfin/pull/17808">Jellyfin PR #17808</a>
-      ·
-      <a href="https://github.com/CorrMedia/jellyfin">Source</a>
+    <div class="footer-bar">
+      <div>CorrMedia · sidecar edits for a patched Jellyfin</div>
+      <div>
+        <a href="https://github.com/jellyfin/jellyfin/pull/17808">Jellyfin PR #17808</a>
+        ·
+        <a href="https://github.com/CorrMedia/jellyfin">Source</a>
+        ·
+        <a href="https://github.com/CorrMedia/jellyfin/blob/main/LICENSE">License</a>
+      </div>
+    </div>
+    <div class="footer-notice">
+      <p>CorrMedia is software for modifying playback of media through a Jellyfin server. CorrMedia does not provide, distribute, host, or index movies, television shows, music, or other copyrighted media.</p>
+      <p>Users are responsible for the media they lawfully obtain, store, and play through their own Jellyfin servers and for complying with applicable copyright and other laws. CorrMedia does not endorse or encourage copyright infringement or the unauthorized distribution of copyrighted material.</p>
+      <p>CorrMedia is independent software and is not affiliated with, endorsed by, or sponsored by the Jellyfin Project.</p>
+      <p>CorrMedia is free software under the <a href="https://github.com/CorrMedia/jellyfin/blob/main/LICENSE">GNU General Public License</a>. It is provided without warranty of any kind. The plugin and schema are GPL-3.0. The Jellyfin core overlay modifies GPL-2.0 Jellyfin sources and must be distributed under terms compatible with Jellyfin’s license.</p>
     </div>
   </footer>
 

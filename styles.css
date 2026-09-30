@@ -1093,7 +1093,7 @@ h2 {
 
 .footer-notice {
   display: grid;
-  gap: 0.7rem;
+  gap: 0rem;
   max-width: 46rem;
   padding-top: 1.15rem;
   border-top: 1px solid var(--line);

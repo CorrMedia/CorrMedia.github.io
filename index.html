@@ -12,7 +12,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=52">
+  <link rel="stylesheet" href="styles.css?v=62">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -23,6 +23,7 @@
       <a href="#how">How it works</a>
       <a href="#edits">Edits</a>
       <a href="#household">Household</a>
+      <a href="#editor">CorrCUT</a>
       <a href="#upstream">Upstream</a>
       <a class="nav-git" href="https://github.com/CorrMedia/jellyfin">GitHub</a>
     </nav>
@@ -31,7 +32,7 @@
   <main id="main">
     <section class="wrap hero" id="top">
       <div class="hero-grid">
-        <div class="hero-copy">
+        <div>
           <p class="kicker">Sidecar edits for the Jellyfin you already run</p>
           <h1>Mute, skip,<br>or cover.</h1>
           <p class="lede">
@@ -81,9 +82,7 @@
               </div>
             </div>
           </div>
-          <figcaption class="poster-credit">
-            <span>The picture and the timeline are illustrations.</span>
-          </figcaption>
+          <figcaption class="poster-credit">The picture and the timeline are illustrations.</figcaption>
         </figure>
       </div>
 
@@ -353,6 +352,23 @@
       </div>
     </section>
 
+    <section class="wrap section" id="editor">
+      <p class="kicker">CorrCUT</p>
+      <h2>The editor that writes the sidecar.</h2>
+      <p class="intro">
+        CorrCUT is where you mark the moments. CorrMedia is what Jellyfin uses to apply them.
+      </p>
+      <figure class="cut">
+        <img src="images/corrcut-editor.png" width="1797" height="1120" alt="CorrCUT with Ash Meridian open. Mute marks on the timeline. The picture is an illustration.">
+        <figcaption class="poster-credit">Ash Meridian in CorrCUT. The picture is the illustration from the top of this page.</figcaption>
+      </figure>
+      <p class="note cut-note">Private home viewing. CorrCUT does not ship movies or a catalog of filters for other titles. Transcripts stay in the local project. This site links to the GitHub release and does not host the installer.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://github.com/CorrMedia/corrcut">CorrCUT on GitHub</a>
+        <a class="btn btn-ghost" href="https://github.com/CorrMedia/corrcut/releases/latest">Latest release</a>
+      </div>
+    </section>
+
     <section class="wrap section" id="upstream">
       <p class="kicker">Make it stock</p>
       <h2>This should not need a fork forever.</h2>
@@ -395,16 +411,18 @@
       <div>
         <a href="https://github.com/jellyfin/jellyfin/pull/17808">Jellyfin PR #17808</a>
         ·
-        <a href="https://github.com/CorrMedia/jellyfin">Source</a>
+        <a href="https://github.com/CorrMedia/jellyfin">Plugin</a>
         ·
-        <a href="https://github.com/CorrMedia/jellyfin/blob/main/LICENSE">License</a>
+        <a href="https://github.com/CorrMedia/corrcut">CorrCUT</a>
+        ·
+        <a href="https://github.com/CorrMedia/jellyfin/blob/main/LICENSE">Plugin license</a>
       </div>
     </div>
     <div class="footer-notice">
-      <p>CorrMedia is software for modifying playback of media through a Jellyfin server. CorrMedia does not provide, distribute, host, or index movies, television shows, music, or other copyrighted media.</p>
-      <p>Users are responsible for the media they lawfully obtain, store, and play through their own Jellyfin servers and for complying with applicable copyright and other laws. CorrMedia does not endorse or encourage copyright infringement or the unauthorized distribution of copyrighted material.</p>
-      <p>CorrMedia is independent software and is not affiliated with, endorsed by, or sponsored by the Jellyfin Project.</p>
-      <p>CorrMedia is free software under the <a href="https://github.com/CorrMedia/jellyfin/blob/main/LICENSE">GNU General Public License, version 2</a>. It is provided without warranty of any kind. The plugin, schema, and Jellyfin core overlay are GPL-2.0, which is required to work with Jellyfin. The overlay modifies GPL-2.0 Jellyfin sources and is distributed under the same license.</p>
+      <p>CorrMedia is software for modifying playback of media through a Jellyfin server. CorrCUT is a Windows editor that writes the playback sidecar CorrMedia applies. Neither provides, distributes, hosts, or indexes movies, television shows, music, or other copyrighted media. CorrCUT does not create a new movie file and does not publish a catalog of title-specific filters.</p>
+      <p>Users are responsible for the media they lawfully obtain, store, and play through their own Jellyfin servers and for complying with applicable copyright and other laws. CorrMedia and CorrCUT do not endorse or encourage copyright infringement or the unauthorized distribution of copyrighted material.</p>
+      <p>CorrMedia and CorrCUT are independent software. They are not affiliated with, endorsed by, or sponsored by any motion-picture studio or by the Jellyfin Project.</p>
+      <p>CorrMedia is free software under the <a href="https://github.com/CorrMedia/jellyfin/blob/main/LICENSE">GNU General Public License, version 2</a>. It is provided without warranty of any kind. The plugin, schema, and Jellyfin core overlay are GPL-2.0, which is required to work with Jellyfin. The overlay modifies GPL-2.0 Jellyfin sources and is distributed under the same license. CorrCUT is free software under the <a href="https://github.com/CorrMedia/corrcut/blob/main/LICENSE">MIT License</a>. Third-party tools bundled in the Windows installer keep their own licenses, and those notices ship with the GitHub release.</p>
     </div>
   </footer>
 

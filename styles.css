@@ -337,28 +337,10 @@ a {
 }
 
 .poster-credit {
-  display: grid;
-  gap: 0.15rem;
   margin: 0.7rem 0 0;
   color: var(--muted);
   font-size: 0.78rem;
   line-height: 1.4;
-}
-
-.poster-credit cite {
-  font-style: normal;
-  font-weight: 600;
-  color: var(--ink);
-}
-
-.poster-credit a {
-  color: var(--muted);
-  text-decoration: none;
-}
-
-.poster-credit a:hover,
-.poster-credit a:focus-visible {
-  color: var(--blue);
 }
 
 .hero::before {
@@ -972,6 +954,27 @@ h2 {
 
 .household:has(#who-riley:checked) .corr-ico {
   color: color-mix(in srgb, var(--blue) 28%, var(--keep));
+}
+
+code {
+  font-family: inherit;
+}
+
+.cut-note {
+  max-width: 42rem;
+  margin: 1.15rem 0 0;
+}
+
+.cut {
+  margin: 1.7rem 0 0;
+}
+
+.cut img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45);
 }
 
 .cta h2 {
